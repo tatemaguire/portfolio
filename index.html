@@ -1,11 +1,51 @@
+<!--
+    I'm thinking of having an AWESOME button that makes the page awesome.
+    It would have to switch between two completely separate sites honestly.
+    This is cause I want my awesome site to be a game in itself.
+    Like maybe you explore a map full of my projects.
+    And when you switch to awesome mode, a fullscreen explosion effect.
+
+    The button should rest on the top of the website at all times, so you can easily
+    switch back at any time. 
+
+    I also have this idea to have a score that is kept in your cookies data. It could be directly
+    influenced by your score inside my games, and also in the metagame.
+    But that would be hard to implement, getting the score from each project I've made.
+
+
+    AWESOME mode should still be my portfolio. You should be able to navigate to each of my
+    projects
+-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Tate Website!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tate Maguire Games</title>
+    <script>
+        let isRed = false;
+        function getCrazy() {
+            alert("Getting crazy, making the button " + (isRed ? "black" : "red") + ".");
+            
+            if (!isRed) {
+                document.getElementById("crazyButton").style.color = "red";
+            } else {
+                document.getElementById("crazyButton").style.color = "black";
+            }
+            isRed = !isRed
+        }
+    </script>
 </head>
 <body>
-    This is Tate Maguire's Website.
-    He makes games.    
+    <h1>
+        Tate Maguire Games
+    </h1>
+    <p>
+        Hi my name is Tate. I make video games.
+    </p>
+    <button type="button" onclick="getCrazy()" id="crazyButton">
+        Get crazy
+    </button>
 </body>
 </html>
