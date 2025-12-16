@@ -3,13 +3,38 @@ html, body {
   padding: 0;
 }  
 
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    padding: 0.1em;
+    text-decoration: none;
+}
+a:link {
+    color: hsl(248, 51%, 40%);
+}
+a:visited {
+    color: hsl(248, 51%, 40%);
+}
+a:hover {
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+a:active {
+    background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+#my-name {
+    line-height: 2em;
+}
+
 #background {
     display: block;
     width: 100vw;
     height: 100vh;
 }
 
-#menu {
+#menu-panel {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -21,13 +46,11 @@ html, body {
     color: rgb(79, 67, 89);
 
     text-align: center;
+    font-size: x-large;
 }
 
-.menu-item {
+#menu-text {
     position: relative;
     top: 50%;
-    transform: translateY(-55%);
-    margin: 5px;
-
-    font-size: xx-large;
+    transform: translateY(-65%);
 }
