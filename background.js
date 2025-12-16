@@ -8,7 +8,5 @@ function windowResized() {
 }
 
 function draw() {
-    background(220);
-    //circle in the center with a width of 100
-    circle(100,100,100);
+    background("#9d8ea9ff");
 }
