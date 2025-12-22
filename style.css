@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 a:link, a:visited {
-    color: hsl(248, 51%, 40%);
+    color: black;
 }
 a:hover, a:active {
     background-color: hsla(0, 0%, 0%, 0.1);
@@ -24,8 +24,9 @@ a:hover, a:active {
 }
 
 #background {
-    width: 500;
-    height: 700;
+    display: block;
+    width: 100vw;
+    height: 100vh;
 }
 
 #menu-panel {
@@ -33,15 +34,18 @@ a:hover, a:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 12rem;
-    height: 12rem;
-    border-radius: 2em;
+    width: 18rem;
+    height: 18rem;
 
-    background-color: rgb(236, 220, 255);
+    background-image: url('./menu-panel.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
     color: rgb(79, 67, 89);
 
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 #menu-text {
