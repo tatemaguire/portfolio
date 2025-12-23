@@ -14,6 +14,11 @@ class Starfield {
             }
         }
     }
+    update(pointer) {
+        for (const star of this.stars) {
+            star.update(pointer);
+        }
+    }
     draw(ctx, scale) {
         ctx.fillStyle = "white";
         for (const star of this.stars) {
@@ -31,13 +36,25 @@ class Star {
         this.idleX = 0;
         this.idleY = 0;
     }
+    update(pointer) {
+        if (dist(this, pointer) < 10) {
+            this.offsetX = 2;
+            this.offsetY = 2;
+        } else {
+            this.offsetX = 0;
+            this.offsetY = 0;
+        }
+    }
     draw(ctx, scale) {
-        const offset = Math.floor(scale / 2);
         const finalX = (this.x + this.offsetX + this.idleX) * scale;
         const finalY = (this.y + this.offsetY + this.idleY) * scale;
 
         ctx.fillRect(finalX, finalY, scale, scale);
     }
+}
+
+function dist(p, q) {
+    return Math.sqrt(Math.pow(p.x - q.x, 2) + Math.pow(p.y - q.y, 2));
 }
 
 export { Starfield };

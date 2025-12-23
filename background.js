@@ -5,23 +5,40 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
 
-let starfield = new Starfield(400, 400);
+let starfield = new Starfield(500, 500);
+let scale = 4;
 
-drawBackground
-function drawBackground() {
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+let pointer = {
+    x: 0,
+    y: 0,
 }
 
 globalThis.addEventListener("resize", () => {
     canvas.width = globalThis.innerWidth;
     canvas.height = globalThis.innerHeight;
-    drawBackground();
 });
+
+canvas.addEventListener("mousemove", (event) => {
+    pointer.x = Math.floor(event.clientX / scale);
+    pointer.y = Math.floor(event.clientY / scale);
+});
+
+canvas.addEventListener("mouseleave", () => {
+    pointer.x = -100;
+    pointer.y = -100;
+});
+
+function drawBackground() {
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 
 function draw(timestamp) {
     drawBackground();
-    starfield.draw(ctx, 8);
+
+    starfield.update(pointer);
+    starfield.draw(ctx, scale);
     requestAnimationFrame(draw);
 }
 requestAnimationFrame(draw);
+
