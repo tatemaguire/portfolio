@@ -1,9 +1,11 @@
-
+import { Starfield } from "./starfield.js";
 
 const canvas = document.getElementById("background");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
+
+let starfield = new Starfield(400, 400);
 
 drawBackground
 function drawBackground() {
@@ -19,7 +21,7 @@ globalThis.addEventListener("resize", () => {
 
 function draw(timestamp) {
     drawBackground();
+    starfield.draw(ctx, 8);
     requestAnimationFrame(draw);
 }
-
 requestAnimationFrame(draw);
