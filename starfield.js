@@ -1,4 +1,4 @@
-const INTERACTION_RADIUS = 15;
+const INTERACTION_RADIUS = 25;
 
 class Starfield {
     constructor(width, height) {
@@ -15,7 +15,6 @@ class Starfield {
                 }
             }
         }
-        // this.stars.push(new Star(20, 20));
     }
     update(pointer) {
         for (const star of this.stars) {
