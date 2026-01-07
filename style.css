@@ -38,7 +38,7 @@ a:hover, a:active {
     width: 18rem;
     height: 18rem;
 
-    background-image: url('./menu-panel.svg');
+    background-image: url('./assets/menu-panel.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
