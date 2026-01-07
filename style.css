@@ -54,3 +54,12 @@ a:hover, a:active {
     top: 50%;
     transform: translateY(-50%);
 }
+
+#social-links {
+    line-height: 1.5em;
+}
+
+#social-links > a {
+    padding: 0em;
+    /* background-color: hsla(0, 0%, 0%, 0); */
+}
