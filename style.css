@@ -25,6 +25,7 @@ a:hover, a:active {
 }
 
 #background {
+    position: fixed;
     display: block;
     width: 100vw;
     height: 100vh;
@@ -61,5 +62,39 @@ a:hover, a:active {
 
 #social-links > a {
     padding: 0em;
-    /* background-color: hsla(0, 0%, 0%, 0); */
+}
+
+/* Content Pages */
+#content-panel {
+    background-color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    padding: 50px 30px 30px 30px;
+    text-align: left;
+    line-height: 2rem;
+
+    font-size: 1.2rem;
+    & h {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    & h2 {
+        font-weight: normal;
+    }
+    & img {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    & a {
+        text-decoration-line: underline;
+    }
+    & .caption-text {
+        font-size: 0.8em;
+        text-align: center;
+        color: rgb(81, 81, 81)
+    }
 }
