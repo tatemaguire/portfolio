@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tate Maguire Games</title>
+    <link rel="stylesheet" href="https://use.typekit.net/lew5amp.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
   </head>
@@ -11,7 +12,8 @@
     <main>
       <canvas id="background"></canvas>
       <div id="content-panel">
-        <h>About Me</h>
+        <h>Tate Maguire</h>
+        <div class="divider-line"></div>
         <p>
           I am a third year student at UC Santa Cruz, and I'm pursuing a B.S. in 
           Computer Science: Game Design, and a Minor in Electronic Music. I have experience 
@@ -23,23 +25,50 @@
           <br>
           I'm currently looking for an internship for Summer 2026 as a software engineer,
           game designer, or sound designer.
-          <br>
-          <br>
-          <a href="./assets/tate_maguire_resume.pdf">View my resume.</a>
+          <a href="./assets/tate_maguire_resume.pdf"><h3>View my resume.</h3></a>
         </p>
         <br>
-        <h>Projects</h>
+        <h>Portfolio</h>
+        <div class="divider-line"></div>
         <br>
         <h2>Tiny Renderer</h2>
         <img src="./assets/tiny_renderer_output.png" style="width: 60%;">
         <p class="caption-text">
-          Diablo monster 3D model rendered using my Tiny Renderer.
+          3D model rendered using my Tiny Renderer.
         </p>
         <p>
           Tiny Renderer is a 3D rendering API that I implemented in C++. I used Bresenham's 
           line algorithm and Barycentric coordinates to draw lines and triangles on screen 
           with UV texture mapping and flat shading. I also designed and implemented a Matrix 
           class to use for calculating perspective projection.
+        </p>
+        <br>
+        <div class="divider-line"></div>
+        <br>
+        <h2>Pink Yellow Swaparoni</h2>
+        <a href="https://tatemaguire.itch.io/pys" class="no-highlight"><img src="./assets/pink_yellow_swaparoni.png" style="width: 60%;"></a>
+        <p class="caption-text">
+          Click the image to play!
+        </p>
+        <p>
+          Pink Yellow Swaparoni is a 2D metroidvania/platformer I made that started as a 
+          school project but quickly turned into a passion project. I designed it, 
+          programmed movement mechanics and particles, and synthesized sound effects. To make 
+          level editing easier, I created a special tilemap parser to separate the tilemap into
+          parallel pink and yellow worlds.
+        </p>
+        <br>
+        <div class="divider-line"></div>
+        <br>
+        <h2>Ghost</h2>
+        <a href="https://tatemaguire.itch.io/ghost" class="no-highlight"><img src="./assets/ghost.p8.png" style="width: 60%;"></a>
+        <p class="caption-text">
+          Click the image to play!
+        </p>
+        <p>
+          Ghost is a puzzle game I made for the week-long Uni Game Jam 2025. I made it using 
+          Pico-8, a fantasy retro console with strict limitations. I made a custom particle 
+          system that reacts to player movement in unique ways.
         </p>
       </div>
     </main>
