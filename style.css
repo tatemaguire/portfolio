@@ -23,8 +23,11 @@ a {
 a:link, a:visited {
     color: black;
 }
-a:hover, a:active {
+a:hover {
     background-color: hsla(0, 0%, 0%, 0.1);
+}
+a:active {
+    background-color: hsla(0, 0%, 0%, 0.2);
 }
 
 a.no-highlight {
